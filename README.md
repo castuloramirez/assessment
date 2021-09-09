@@ -28,7 +28,7 @@ branch, created from main and push it back to Github.
 
 Building the App:
 ------------------------------------------------------
-
+```
 assessment\api> mvn clean install -U
 
 [INFO] BUILD SUCCESS
@@ -36,10 +36,11 @@ assessment\api> mvn clean install -U
 [INFO] Total time:  9.970 s
 [INFO] Finished at: 2021-08-20T14:28:51+02:00
 [INFO] ------------------------------------------------------------------------
+```
 
 Running the App:
 ------------------------------------------------------
-
+```
 assessment\api> mvn spring-boot:run
 
 14:29:29.845 [Thread-5] DEBUG org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-cd9ku08u-consumer-2, groupId=cd9ku08u-consumer] Completed co
@@ -56,7 +57,7 @@ tializing the Kafka consumer
  :: Spring Boot ::                (v2.5.4)
 
 2021-08-20 14:29:31.123  INFO 34324 --- [  restartedMain] com.ribs.api.Api  
-
+```
 
 Database Connection
 

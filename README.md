@@ -4,14 +4,21 @@
 
 In project Assessment are prepared 2 empty services (modules): `API` and `Logger`. Implement these services in the
 following way:
-API service is responsible for communication via REST API with GUI frontend. It should contain 2 REST endpoints. First
-endpoint is used to obtain list of all articles from database. Second endpoint should return content of concrete article
-with all comments. Each operation on rest API is logged in Logger service (written to STDOUT). API service and Logger
+
+API service is responsible for communication via REST API with GUI frontend. 
+
+1) It should contain 2 REST endpoints: 
+
+- First endpoint is used to obtain list of all articles from database. 
+- Second endpoint should return content of concrete article with all comments.
+
+2) Each operation on rest API is logged in Logger service (written to STDOUT). API service and Logger
 service should communicate through Kafka topic. Kafka connection details are prepared in helper
-class [KafkaConnectionHelper](api/src/main/java/com/ribs/api/KafkaConnectionHelper.java). Articles and comments are
-stored in MySQL database (connection string is
-in [application.properties](api/src/main/resources/application.properties) file). Database tables and their relations
-are described in [er_diagram.png](er_diagram.png).
+class [KafkaConnectionHelper](api/src/main/java/com/ribs/api/KafkaConnectionHelper.java). 
+
+3) Articles and comments are stored in MySQL database (connection string is in [application.properties](api/src/main/resources/application.properties) file). 
+Database tables and their relations are described in [er_diagram.png](er_diagram.png).
+
 
 All authentication details for MySQL and Kafka will be provided via email, right before the challenge. You can use
 properties `kafka.username` and `kafka.password` for authentication to Kafka broker. Prepare your solution in new
@@ -21,7 +28,7 @@ branch, created from main and push it back to Github.
 
 Building the App:
 ------------------------------------------------------
-
+```
 assessment\api> mvn clean install -U
 
 [INFO] BUILD SUCCESS
@@ -29,10 +36,11 @@ assessment\api> mvn clean install -U
 [INFO] Total time:  9.970 s
 [INFO] Finished at: 2021-08-20T14:28:51+02:00
 [INFO] ------------------------------------------------------------------------
+```
 
 Running the App:
 ------------------------------------------------------
-
+```
 assessment\api> mvn spring-boot:run
 
 14:29:29.845 [Thread-5] DEBUG org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-cd9ku08u-consumer-2, groupId=cd9ku08u-consumer] Completed co
@@ -49,7 +57,7 @@ tializing the Kafka consumer
  :: Spring Boot ::                (v2.5.4)
 
 2021-08-20 14:29:31.123  INFO 34324 --- [  restartedMain] com.ribs.api.Api  
-
+```
 
 Database Connection
 

@@ -1,4 +1,4 @@
-package com.ribs.api.rest.dao;
+package com.ribs.api.rest.dao.impl;
 
 import com.ribs.api.rest.model.Article;
 import com.ribs.api.rest.model.SearchArticle;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Date;
 
 @Repository
-public class ArticlesDAO {
+public class ArticlesDaoImpl {
 
     @Autowired
     ResourceLoader resourceLoader;

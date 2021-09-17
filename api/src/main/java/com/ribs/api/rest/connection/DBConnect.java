@@ -14,7 +14,7 @@ public class DBConnect {
             return;
         }
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/jgp6y3rjWo", "jgp6y3rjWo", "vhbjNSfOlL");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/codereview", "root", "root");
             if (conn != null) {
                 System.out.println("Database Connection Successful! Enjoy. Now it's time to push data");
             } else {

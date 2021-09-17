@@ -60,18 +60,20 @@ tializing the Kafka consumer
 ```
 
 Database Connection
-
-Connection
-
+------------------------------------------------------
+```
+spring.datasource.url = jdbc:mysql://localhost:3306/codereview
+```
 
 Using Postman:
+------------------------------------------------------
 
 http://localhost:8080/articles/article
 { "id": "1",
   "name":"castulo"
 }
 
-
+```
 Output:
 
 2021-08-20 14:19:15.901  INFO 39144 --- [      Thread-10] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.8.0
@@ -82,4 +84,4 @@ t0L3VfA
 KafkaExample.produce().new Thread() {...}.run(I) Topic----> cd9ku08u-defaultArticle id1
 KafkaExample.consume()cd9ku08u-default;4;;39;1;castulo
 cd9ku08u-default [4] offset=39, key=1, value="castulo"
-
+```

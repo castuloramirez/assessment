@@ -1,7 +1,7 @@
 package com.ribs.api.rest;
 
 import com.ribs.api.KafkaConnectionHelper;
-import com.ribs.api.rest.dao.ArticlesDAO;
+import com.ribs.api.rest.dao.impl.ArticlesDaoImpl;
 import com.ribs.api.rest.model.Article;
 import com.ribs.api.rest.model.SearchArticle;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiService {
 
     @Autowired
-    private ArticlesDAO articleDAO;
+    private ArticlesDaoImpl articleDAO;
 
     @PostMapping(path = "/article", consumes = "application/json", produces = "application/json")
     public Article getArticle(@RequestBody SearchArticle toSearchArticle)
